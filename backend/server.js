@@ -9,7 +9,6 @@ import couponRoutes from "./routes/coupon.route.js";
 import paymentRoutes from "./routes/payment.route.js";
 import analyticsRoutes from "./routes/analytics.route.js";
 import path from "path";
-import cors from "cors";
 
 // Load environment variables from .env
 dotenv.config();
@@ -26,9 +25,6 @@ const __dirname = path.resolve();
 // Middleware
 app.use(express.json({ limit: "10mb" })); // Parse JSON request bodies
 app.use(cookieParser()); // Parse cookies
-app.use(cors({
-    origin: "https://e-commerce-store-s83s.vercel.app"
-}))
 
 // Routes
 app.use("/api/auth", authRoute);
