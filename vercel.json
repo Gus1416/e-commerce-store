@@ -2,7 +2,18 @@
     "version": 2,
     "builds": [
         {
+<<<<<<< HEAD
             "src": "/",
+=======
+            "src": "frontend/index.html",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "frontend/build"
+            }
+        },
+        {
+            "src": "backend/server.js",
+>>>>>>> 85d6dcde184bd0d8e74ae8e8ebd647d793881c59
             "use": "@vercel/node"
         }
     ],
